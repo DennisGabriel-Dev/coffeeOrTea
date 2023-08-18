@@ -17,14 +17,16 @@ public class Order implements Serializable{
 	private String id;
 	private ClientDAO client;
 	private Date date;
+	private String observation;
 	
 	public Order() {}
 	
-	public Order(String id, ClientDAO client, Date date) {
+	public Order(String id, ClientDAO client, Date date, String observation) {
 		super();
 		this.id = id;
 		this.client = client; 
 		this.date = date;
+		this.observation = observation;
 	}
 
 	public String getId() {
@@ -49,6 +51,13 @@ public class Order implements Serializable{
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public String getObservation() {
+		return observation;
+	}
+
+	public void setObservation(String observation) {
+		this.observation = observation;
 	}
 
 	@Override

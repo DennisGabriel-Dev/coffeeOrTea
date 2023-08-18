@@ -27,7 +27,7 @@ public class Instantiation implements CommandLineRunner{
 		
 		ClientDAO clientDAO1 = new ClientDAO(client1);
 		
-		Order o1 = new Order(null, clientDAO1, sdf.parse("22/08/2023"));
+		Order o1 = new Order(null, clientDAO1, sdf.parse("22/08/2023"), "Three cups of tea.");
 
 		clientRepository.save(client1);
 		orderRepository.save(o1);
