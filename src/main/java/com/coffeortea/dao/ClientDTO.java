@@ -2,10 +2,13 @@ package com.coffeortea.dao;
 
 import com.coffeortea.domain.Client;
 
-public class ClientDAO {
+public class ClientDTO {
 	private String name;
 	private String email;
-	public ClientDAO(Client client) {
+	
+	public ClientDTO() {}
+	
+	public ClientDTO(Client client) {
 		name = client.getName();
 		email = client.getEmail();
 	}

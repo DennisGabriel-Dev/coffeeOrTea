@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.coffeortea.dao.ClientDAO;
+import com.coffeortea.dao.ClientDTO;
 import com.coffeortea.domain.Client;
 import com.coffeortea.domain.Order;
 import com.coffeortea.repository.ClientRepository;
@@ -25,7 +25,7 @@ public class Instantiation implements CommandLineRunner{
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Client client1 = new Client(null, "Dennis Gabriel", "dennisgabr@gmail.com", "123");
 		
-		ClientDAO clientDAO1 = new ClientDAO(client1);
+		ClientDTO clientDAO1 = new ClientDTO(client1);
 		
 		Order o1 = new Order(null, clientDAO1, sdf.parse("22/08/2023"), "Three cups of tea.");
 

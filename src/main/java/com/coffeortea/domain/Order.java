@@ -6,7 +6,7 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.coffeortea.dao.ClientDAO;
+import com.coffeortea.dao.ClientDTO;
 
 
 @Document(collection = "orders")
@@ -15,13 +15,13 @@ public class Order implements Serializable{
 
 	@Id
 	private String id;
-	private ClientDAO client;
+	private ClientDTO client;
 	private Date date;
 	private String observation;
 	
 	public Order() {}
 	
-	public Order(String id, ClientDAO client, Date date, String observation) {
+	public Order(String id, ClientDTO client, Date date, String observation) {
 		super();
 		this.id = id;
 		this.client = client; 
@@ -37,11 +37,11 @@ public class Order implements Serializable{
 		this.id = id;
 	}
 
-	public ClientDAO getClient() {
+	public ClientDTO getClient() {
 		return client;
 	}
 
-	public void setClient(ClientDAO client) {
+	public void setClient(ClientDTO client) {
 		this.client = client;
 	}
 
